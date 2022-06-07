@@ -1,0 +1,34 @@
+.slider{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    overflow-x: auto;
+    &::-webkit-scrollbar{
+        visibility: hidden;
+    }
+    span{
+        position: absolute;
+        top: 120px;
+        font-size: 36px;
+        z-index: 1;
+        &:first-of-type{
+            left: 0vw;
+        }
+        &:last-of-type{
+            left: calc(100vw - 100px);
+        }
+    }
+    .item{
+        position: relative;
+        left: 0;
+        min-width: 400px;
+        min-height: 100%;
+        position: relative;
+        left: 0;
+        background-color: purple;
+        margin-right: 30px;
+        transition: left .4s ease-out;
+    }
+}
